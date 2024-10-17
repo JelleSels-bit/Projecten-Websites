@@ -9,7 +9,7 @@
       body {
         margin: 0; /* Verwijder standaard marge */
         font-family: Arial, sans-serif; /* Voor een nette tekststijl */
-        background-color: lightgray; /* Achtergrondkleur van de pagina */
+        background-color: white; /* Achtergrondkleur van de pagina */
       }
 
       /* Stijl voor de header */
@@ -78,6 +78,7 @@
 
       .NaamEnIntro {
         padding: 20px 150px; /* Voeg padding toe voor betere uitlijning */
+        background-color: lightgray;
       }
 
       /* Stijl voor de paragraaf */
@@ -86,6 +87,20 @@
         line-height: 1.4; /* Verhoog de regelhoogte */
         color: #333; /* Donkerdere kleur voor betere leesbaarheid */
         padding-right: 400px;
+      }
+
+      .images {
+        display: flex; /* Flexbox voor het uitlijnen van afbeeldingen */
+        justify-content: space-between; /* Zorgt voor gelijke ruimte tussen de afbeeldingen */
+        padding: 20px; /* Padding rondom de afbeeldingen */
+        gap: 10px; /* Ruimte tussen de afbeeldingen */
+      }
+
+      .images img {
+        width: 100%; /* Zorg ervoor dat de afbeelding de breedte van de container gebruikt */
+        height: 50%; /* Behoudt de aspect ratio */
+        max-width: 30%; /* Maximaal 30% van de breedte voor elke afbeelding */
+        object-fit: cover; /* Zorgt ervoor dat de afbeelding goed wordt weergegeven zonder vervorming */
       }
     </style>
   </head>
@@ -136,5 +151,12 @@
         te delen!
       </p>
     </main>
+
+    <div class="images">
+      <img src="img/Mezelf/Afbeelding kringwinkel.jpg" alt="Foto 1">
+      <img src="img/Mezelf/Afbeelding mezelf 1.jpg" alt="Foto 2">
+      <img src="img/Mezelf/afbeelding mezelf 2.jpg" alt="Foto 3">
+    </div>
+    
   </body>
 </html>
