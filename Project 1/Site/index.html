@@ -7,100 +7,101 @@
     <style>
       /* Stijl voor de body */
       body {
-        margin: 0; /* Verwijder standaard marge */
-        font-family: Arial, sans-serif; /* Voor een nette tekststijl */
-        background-color: white; /* Achtergrondkleur van de pagina */
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: lightgray;
       }
 
       /* Stijl voor de header */
       .navbar {
-        background-color: red; /* Kies hier je gewenste kleur */
-        height: 30px; /* Hoogte van de header */
-        padding: 10px 20px; /* Opvulling boven/onder en links/rechts */
-        color: white; /* Kleur van de tekst in de header */
-        width: 80%; /* Breedte van de navbar op 80% van het scherm */
-        margin: 0 auto; /* Centreert de navbar op de pagina */
-        display: flex; /* Zet de navbar op flexbox */
-        justify-content: flex-end; /* Uitlijnen naar de rechterkant */
+        background-color: black;
+        height: 30px;
+        padding: 10px 20px;
+        color: white;
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-end;
       }
 
       .menu {
         list-style: none;
-        margin: 0; /* Verwijder standaard marge */
-        padding: 0; /* Padding van de hoofdlijst verwijderen */
-        display: flex; /* Flexbox voor horizontale uitlijning */
+        margin: 0;
+        padding: 0;
+        display: flex;
       }
 
       .menu li {
-        position: relative; /* Positioneer relatief voor het uitklapmenu */
-        margin-right: 50px; /* Marges tussen de items */
+        position: relative;
+        margin-right: 50px;
       }
 
       .menu ul {
-        position: absolute; /* Absolute positionering voor submenu's */
-        top: 100%; /* Plaats direct onder het hoofdmenu-item */
+        position: absolute;
+        top: 100%;
         text-align: right;
-        width: 150px; /* Breedte van het uitklapmenu */
-        border: 1px solid #000; /* Voeg een border toe rondom het uitklapmenu */
-        display: none; /* Verberg het uitklapmenu standaard */
-        background-color: red; /* Zorg ervoor dat de achtergrondkleur overeenkomt */
-        z-index: 1; /* Zorg ervoor dat het uitklapmenu boven andere elementen komt */
+        width: 150px;
+        border: 1px solid #000;
+        display: none;
+        background-color: red;
+        z-index: 1;
       }
 
       .menu ul li {
-        float: none; /* Geen float voor de items in het uitklapmenu */
+        float: none;
         margin: 0;
         padding: 0;
-        line-height: 20px; /* Verhoog de regelhoogte voor betere leesbaarheid */
+        line-height: 20px;
       }
 
       .menu a:link,
       .menu a:visited {
         display: block;
-        font-family: Tahoma;
+        font-family: Arial, Helvetica, sans-serif;
         font-size: 1em;
         font-weight: bold;
         text-align: left;
         text-decoration: none;
-        color: #000;
+        color: red;
         padding: 5px;
-        padding-left: 10px; /* Verminder de padding aan de linkerkant */
+        padding-left: 10px;
       }
 
-      /* Toon het uitklapmenu bij hover */
       .menu li:hover > ul {
-        display: block; /* Toon het uitklapmenu bij hover */
+        display: block;
       }
 
       .KleurInNavBar {
-        background-color: white; /* Achtergrondkleur voor submenu-items */
+        background-color: white;
       }
 
       .NaamEnIntro {
-        padding: 20px 150px; /* Voeg padding toe voor betere uitlijning */
+        padding: 20px 150px;
         background-color: lightgray;
       }
 
-      /* Stijl voor de paragraaf */
       .NaamEnIntro p {
-        font-size: 1.1em; /* Verhoog de lettergrootte */
-        line-height: 1.4; /* Verhoog de regelhoogte */
-        color: #333; /* Donkerdere kleur voor betere leesbaarheid */
+        font-size: 1.1em;
+        line-height: 1.4;
+        color: #333;
         padding-right: 400px;
       }
 
+      /* Afbeeldingen lay-out met grid */
       .images {
-        display: flex; /* Flexbox voor het uitlijnen van afbeeldingen */
-        justify-content: space-between; /* Zorgt voor gelijke ruimte tussen de afbeeldingen */
-        padding: 20px; /* Padding rondom de afbeeldingen */
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Drie gelijke kolommen */
         gap: 10px; /* Ruimte tussen de afbeeldingen */
+        padding: 20px;
+        background-color: white;
       }
 
       .images img {
-        width: 100%; /* Zorg ervoor dat de afbeelding de breedte van de container gebruikt */
-        height: 50%; /* Behoudt de aspect ratio */
-        max-width: 30%; /* Maximaal 30% van de breedte voor elke afbeelding */
-        object-fit: cover; /* Zorgt ervoor dat de afbeelding goed wordt weergegeven zonder vervorming */
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        border-radius: 5px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
       }
     </style>
   </head>
@@ -116,7 +117,6 @@
               <li class="KleurInNavBar"><a href="#">LineDance</a></li>
             </ul>
           </li>
-
           <li>
             <a href="#">Hobby's</a>
             <ul>
@@ -124,7 +124,6 @@
               <li class="KleurInNavBar"><a href="#">Fietsen</a></li>
             </ul>
           </li>
-
           <li><a href="#">CV</a></li>
           <li><a href="#">Projecten</a></li>
           <li><a href="#">Ervaringen</a></li>
@@ -153,10 +152,13 @@
     </main>
 
     <div class="images">
-      <img src="img/Mezelf/Afbeelding kringwinkel.jpg" alt="Foto 1">
-      <img src="img/Mezelf/Afbeelding mezelf 1.jpg" alt="Foto 2">
-      <img src="img/Mezelf/afbeelding mezelf 2.jpg" alt="Foto 3">
+      <!-- Afbeeldingen van jezelf en interesses -->
+      <img src="img/Mezelf/Afbeelding kringwinkel.jpg" alt="Afbeelding kringwinkel">
+      <img src="img/Mezelf/afbeelding mezelf 2.jpg" alt="Afbeelding mezelf">
+      <img src="img/Interesses/Metal meetings/Graspop afbeelding 1.jpg" alt="Afbeelding Graspop">
+      <img src="img/Interesses/MxGP/mxGP afbeelding 1.jpg" alt="Afbeelding MxGP">
+      <img src="img/Interesses/MxGP/mxGP afbeelding 4.jpg" alt="Afbeelding MxGP 2">
+      <img src="img/Interesses/Metal meetings/afbeelind graspop 5.jpg" alt="Afbeelding fietsen">
     </div>
-    
   </body>
 </html>
