@@ -1,11 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kleur bovenkant pagina</title>
+    <style>
+        /* Stijl voor de body */
+        body {
+            margin: 0; /* Verwijder standaard marge */
+            font-family: Arial, sans-serif; /* Voor een nette tekststijl */
+            background-color: #f0f0f0; /* Achtergrondkleur van de pagina */
+        }
+
+        /* Stijl voor de header */
+        .navbar {
+            background-color: red; /* Kies hier je gewenste kleur */
+            height: 30px; /* Hoogte van de header */
+            padding: 10px; /* Opvulling binnen de header */
+            color: white; /* Kleur van de tekst in de header */
+            width: 100%;
+            display: flex; /* Zet de navbar op flexbox */
+            justify-content: flex-end; /* Uitlijnen naar de rechterkant */
+        }
+
+        .menu {
+            list-style: none;
+            margin: 0;
+            padding: 0; /* Padding van de hoofdlijst verwijderen */
+            display: flex; /* Flexbox voor horizontale uitlijning */
+        }
+
+        .menu li {
+            position: relative; /* Positioneer relatief voor het uitklapmenu */
+            margin-right: 50px; /* Marges tussen de items */
+        }
+
+        .menu ul {
+            position: absolute; /* Absolute positionering voor submenu's */
+            top: 100%; /* Plaats direct onder het hoofdmenu-item */
+            text-align: right;
+            width: 150px; /* Breedte van het uitklapmenu */
+            border: 1px solid #000; /* Voeg een border toe rondom het uitklapmenu */
+            display: none; /* Verberg het uitklapmenu standaard */
+            background-color: red; /* Zorg ervoor dat de achtergrondkleur overeenkomt */
+            z-index: 1; /* Zorg ervoor dat het uitklapmenu boven andere elementen komt */
+        }
+
+        .menu ul li {
+            float: none; /* Geen float voor de items in het uitklapmenu */
+            margin: 0;
+            padding: 0;
+            line-height: 20px; /* Verhoog de regelhoogte voor betere leesbaarheid */
+        }
+
+        .menu a:link,
+        .menu a:visited {
+            display: block;
+            font-family: Tahoma;
+            font-size: 1em;
+            font-weight: bold;
+            text-align: left;
+            text-decoration: none;
+            color: #000;
+            padding: 5px;
+            padding-left: 10px; /* Verminder de padding aan de linkerkant */
+        }
+
+        /* Toon het uitklapmenu bij hover */
+        .menu li:hover > ul {
+            display: block; /* Toon het uitklapmenu bij hover */
+        }
+
+        .KleurInNavBar {
+            background-color: white; /* Achtergrondkleur voor submenu-items */
+        }
+    </style>
 </head>
 <body>
-    
+    <header>
+        <div class="navbar">
+            <ul class="menu">
+
+                <li>
+                    <a href="#">Interesses</a>
+                    <ul>
+                        <li class="KleurInNavBar"><a href="#">Metal Meetings</a></li>
+                        <li class="KleurInNavBar"><a href="#">MxGP</a></li>
+                        <li class="KleurInNavBar"><a href="#">LineDance</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">Hobby's</a>
+                    <ul>
+                        <li class="KleurInNavBar"><a href="#">Fitness</a></li>
+                        <li class="KleurInNavBar"><a href="#">Fietsen</a></li>
+                    </ul>
+                </li>
+
+                
+                <li><a href="#">CV</a></li>
+                <li><a href="#">Projecten</a></li>
+                <li><a href="#">Ervaringen</a></li>
+                <li><a href="#">Contact!!</a></li>
+
+
+            </ul>
+        </div>
+    </header>
+
+    <main></main>
 </body>
 </html>
