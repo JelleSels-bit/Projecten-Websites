@@ -1,114 +1,140 @@
 <!DOCTYPE html>
 <html lang="nl">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kleur bovenkant pagina</title>
     <style>
-        /* Stijl voor de body */
-        body {
-            margin: 0; /* Verwijder standaard marge */
-            font-family: Arial, sans-serif; /* Voor een nette tekststijl */
-            background-color: #f0f0f0; /* Achtergrondkleur van de pagina */
-        }
+      /* Stijl voor de body */
+      body {
+        margin: 0; /* Verwijder standaard marge */
+        font-family: Arial, sans-serif; /* Voor een nette tekststijl */
+        background-color: lightgray; /* Achtergrondkleur van de pagina */
+      }
 
-        /* Stijl voor de header */
-        .navbar {
-            background-color: red; /* Kies hier je gewenste kleur */
-            height: 30px; /* Hoogte van de header */
-            padding: 10px; /* Opvulling binnen de header */
-            color: white; /* Kleur van de tekst in de header */
-            width: 100%;
-            display: flex; /* Zet de navbar op flexbox */
-            justify-content: flex-end; /* Uitlijnen naar de rechterkant */
-        }
+      /* Stijl voor de header */
+      .navbar {
+        background-color: red; /* Kies hier je gewenste kleur */
+        height: 30px; /* Hoogte van de header */
+        padding: 10px 20px; /* Opvulling boven/onder en links/rechts */
+        color: white; /* Kleur van de tekst in de header */
+        width: 80%; /* Breedte van de navbar op 80% van het scherm */
+        margin: 0 auto; /* Centreert de navbar op de pagina */
+        display: flex; /* Zet de navbar op flexbox */
+        justify-content: flex-end; /* Uitlijnen naar de rechterkant */
+      }
 
-        .menu {
-            list-style: none;
-            margin: 0;
-            padding: 0; /* Padding van de hoofdlijst verwijderen */
-            display: flex; /* Flexbox voor horizontale uitlijning */
-        }
+      .menu {
+        list-style: none;
+        margin: 0; /* Verwijder standaard marge */
+        padding: 0; /* Padding van de hoofdlijst verwijderen */
+        display: flex; /* Flexbox voor horizontale uitlijning */
+      }
 
-        .menu li {
-            position: relative; /* Positioneer relatief voor het uitklapmenu */
-            margin-right: 50px; /* Marges tussen de items */
-        }
+      .menu li {
+        position: relative; /* Positioneer relatief voor het uitklapmenu */
+        margin-right: 50px; /* Marges tussen de items */
+      }
 
-        .menu ul {
-            position: absolute; /* Absolute positionering voor submenu's */
-            top: 100%; /* Plaats direct onder het hoofdmenu-item */
-            text-align: right;
-            width: 150px; /* Breedte van het uitklapmenu */
-            border: 1px solid #000; /* Voeg een border toe rondom het uitklapmenu */
-            display: none; /* Verberg het uitklapmenu standaard */
-            background-color: red; /* Zorg ervoor dat de achtergrondkleur overeenkomt */
-            z-index: 1; /* Zorg ervoor dat het uitklapmenu boven andere elementen komt */
-        }
+      .menu ul {
+        position: absolute; /* Absolute positionering voor submenu's */
+        top: 100%; /* Plaats direct onder het hoofdmenu-item */
+        text-align: right;
+        width: 150px; /* Breedte van het uitklapmenu */
+        border: 1px solid #000; /* Voeg een border toe rondom het uitklapmenu */
+        display: none; /* Verberg het uitklapmenu standaard */
+        background-color: red; /* Zorg ervoor dat de achtergrondkleur overeenkomt */
+        z-index: 1; /* Zorg ervoor dat het uitklapmenu boven andere elementen komt */
+      }
 
-        .menu ul li {
-            float: none; /* Geen float voor de items in het uitklapmenu */
-            margin: 0;
-            padding: 0;
-            line-height: 20px; /* Verhoog de regelhoogte voor betere leesbaarheid */
-        }
+      .menu ul li {
+        float: none; /* Geen float voor de items in het uitklapmenu */
+        margin: 0;
+        padding: 0;
+        line-height: 20px; /* Verhoog de regelhoogte voor betere leesbaarheid */
+      }
 
-        .menu a:link,
-        .menu a:visited {
-            display: block;
-            font-family: Tahoma;
-            font-size: 1em;
-            font-weight: bold;
-            text-align: left;
-            text-decoration: none;
-            color: #000;
-            padding: 5px;
-            padding-left: 10px; /* Verminder de padding aan de linkerkant */
-        }
+      .menu a:link,
+      .menu a:visited {
+        display: block;
+        font-family: Tahoma;
+        font-size: 1em;
+        font-weight: bold;
+        text-align: left;
+        text-decoration: none;
+        color: #000;
+        padding: 5px;
+        padding-left: 10px; /* Verminder de padding aan de linkerkant */
+      }
 
-        /* Toon het uitklapmenu bij hover */
-        .menu li:hover > ul {
-            display: block; /* Toon het uitklapmenu bij hover */
-        }
+      /* Toon het uitklapmenu bij hover */
+      .menu li:hover > ul {
+        display: block; /* Toon het uitklapmenu bij hover */
+      }
 
-        .KleurInNavBar {
-            background-color: white; /* Achtergrondkleur voor submenu-items */
-        }
+      .KleurInNavBar {
+        background-color: white; /* Achtergrondkleur voor submenu-items */
+      }
+
+      .NaamEnIntro {
+        padding: 20px 150px; /* Voeg padding toe voor betere uitlijning */
+      }
+
+      /* Stijl voor de paragraaf */
+      .NaamEnIntro p {
+        font-size: 1.1em; /* Verhoog de lettergrootte */
+        line-height: 1.4; /* Verhoog de regelhoogte */
+        color: #333; /* Donkerdere kleur voor betere leesbaarheid */
+        padding-right: 400px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="navbar">
-            <ul class="menu">
-
-                <li>
-                    <a href="#">Interesses</a>
-                    <ul>
-                        <li class="KleurInNavBar"><a href="#">Metal Meetings</a></li>
-                        <li class="KleurInNavBar"><a href="#">MxGP</a></li>
-                        <li class="KleurInNavBar"><a href="#">LineDance</a></li>
-                    </ul>
-                </li>
-
-                <li>
-                    <a href="#">Hobby's</a>
-                    <ul>
-                        <li class="KleurInNavBar"><a href="#">Fitness</a></li>
-                        <li class="KleurInNavBar"><a href="#">Fietsen</a></li>
-                    </ul>
-                </li>
-
-                
-                <li><a href="#">CV</a></li>
-                <li><a href="#">Projecten</a></li>
-                <li><a href="#">Ervaringen</a></li>
-                <li><a href="#">Contact!!</a></li>
-
-
+      <div class="navbar">
+        <ul class="menu">
+          <li>
+            <a href="#">Interesses</a>
+            <ul>
+              <li class="KleurInNavBar"><a href="#">Metal Meetings</a></li>
+              <li class="KleurInNavBar"><a href="#">MxGP</a></li>
+              <li class="KleurInNavBar"><a href="#">LineDance</a></li>
             </ul>
-        </div>
+          </li>
+
+          <li>
+            <a href="#">Hobby's</a>
+            <ul>
+              <li class="KleurInNavBar"><a href="#">Fitness</a></li>
+              <li class="KleurInNavBar"><a href="#">Fietsen</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#">CV</a></li>
+          <li><a href="#">Projecten</a></li>
+          <li><a href="#">Ervaringen</a></li>
+          <li><a href="#">Contact!!</a></li>
+        </ul>
+      </div>
     </header>
 
-    <main></main>
-</body>
+    <main class="NaamEnIntro">
+      <h1>Meet Jelle Sels:</h1>
+      <p>
+        Hallo, ik ben Jelle. Op deze plek kun je meer over mij ontdekken, mijn
+        hobby's en interesses. Maar ook de projecten waaraan ik werk. Als Full Stack
+        Developer in opleiding ben ik gefascineerd door het volledige proces van
+        softwareontwikkeling, van het ontwerp tot de implementatie en het
+        onderhoud. Deze website is volledig handmatig gecodeerd, zonder gebruik
+        te maken van frameworks zoals Bootstrap of Tailwind.
+        Hier deel ik niet alleen mijn technische vaardigheden, maar ook mijn
+        leerproces en de uitdagingen die ik tegenkom. Neem gerust een kijkje
+        rond om meer te leren over mijn ervaringen, projecten en interesses. Of
+        je nu een medestudent bent, een toekomstige werkgever, of gewoon iemand
+        die nieuwsgierig is, ik hoop dat je iets waardevols kunt vinden op mijn
+        site. Bedankt voor je bezoek en ik kijk ernaar uit om mijn reis met jou
+        te delen!
+      </p>
+    </main>
+  </body>
 </html>
