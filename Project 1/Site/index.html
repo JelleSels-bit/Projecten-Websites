@@ -7,21 +7,22 @@
     <style>
       /* Stijl voor de body */
       body {
-        margin: 0;
         font-family: Arial, Helvetica, sans-serif;
-        background-color: lightgray;
+        background-color: #f0f0f0; /* Lichtere achtergrond voor de hele pagina */
+        margin: 0;
+        padding: 0;
       }
 
       /* Stijl voor de header */
       .navbar {
-        background-color: black;
-        height: 30px;
-        padding: 10px 20px;
+        background-color: #333; /* Donkerdere kleur voor de navigatie */
+        padding: 15px 20px; /* Meer ruimte */
         color: white;
         width: 80%;
         margin: 0 auto;
         display: flex;
-        justify-content: flex-end;
+        align-items: center; /* Centraal uitlijnen van het logo en menu */
+        justify-content: space-between; /* Ruimte tussen logo en menu */
       }
 
       .menu {
@@ -33,7 +34,7 @@
 
       .menu li {
         position: relative;
-        margin-right: 50px;
+        margin-right: 30px; /* Iets minder ruimte tussen menu-items */
       }
 
       .menu ul {
@@ -43,7 +44,7 @@
         width: 150px;
         border: 1px solid #000;
         display: none;
-        background-color: red;
+        background-color: #333; /* Achtergrondkleur voor submenu */
         z-index: 1;
       }
 
@@ -51,7 +52,6 @@
         float: none;
         margin: 0;
         padding: 0;
-        line-height: 20px;
       }
 
       .menu a:link,
@@ -62,66 +62,114 @@
         font-weight: bold;
         text-align: left;
         text-decoration: none;
-        color: red;
-        padding: 5px;
-        padding-left: 10px;
+        color: lightcoral;
+        padding: 10px 15px; /* Meer padding voor beter uiterlijk */
+      }
+
+      .menu a:hover {
+        background-color: lightcoral; /* Achtergrondkleur bij hover */
+        color: white; /* Tekstkleur bij hover */
       }
 
       .menu li:hover > ul {
         display: block;
       }
 
-      .KleurInNavBar {
-        background-color: white;
-      }
-
-      .NaamEnIntro {
-        padding: 20px 150px;
-        background-color: lightgray;
-      }
-
-      .NaamEnIntro p {
-        font-size: 1.1em;
-        line-height: 1.4;
-        color: #333;
-        padding-right: 400px;
-      }
-
-      /* Afbeeldingen lay-out met grid */
-      .images {
+      /* Grid systeem voor de hoofdcontainer */
+      .grid-container {
         display: grid;
-        grid-template-columns: repeat(3, 1fr); /* Drie gelijke kolommen */
-        gap: 10px; /* Ruimte tussen de afbeeldingen */
+        grid-template-columns: 1fr 1fr; /* Twee kolommen */
+        gap: 20px;
         padding: 20px;
-        background-color: white;
+        width: 100%;
+        box-sizing: border-box;
       }
 
-      .images img {
-        width: 100%;
-        height: 500px;
-        object-fit: cover;
-        border-radius: 5px;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      /* Responsive lay-out voor mobiele apparaten */
+      @media (max-width: 768px) {
+        .grid-container {
+          grid-template-columns: 1fr; /* Enkele kolom op mobiele apparaten */
+        }
+      }
+
+      /* Stijl voor de linker div */
+      .linkerkant {
+        background-color: #6baed6;
+        padding: 30px;
+        text-align: left;
+        font-size: 18px;
+        color: white;
+        line-height: 1.6;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .linkerkant h1 {
+        font-size: 2.2em;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      .linkerkant p {
+        color: #f2f2f2;
+        font-size: 1.1em;
+      }
+
+      /* Stijl voor de rechter div */
+      .rechterkant {
+        background-color: lightcoral;
+        padding: 20px;
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Twee kolommen voor de afbeeldingen */
+        gap: 10px; /* Ruimte tussen de afbeeldingen */
+        justify-items: center;
+      }
+
+      /* Responsive voor de afbeeldingen */
+      @media (max-width: 768px) {
+        .rechterkant {
+          grid-template-columns: 1fr; /* Enkele kolom op mobiele apparaten */
+        }
+      }
+
+      /* Afbeeldingsstijl */
+      .images {
+        width: 100%; /* Maak afbeeldingen responsief */
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Logo styling */
+      .logo {
+        width: 150px; /* Specifieke breedte voor het logo */
+        height: auto; /* Zorg ervoor dat de hoogte automatisch wordt aangepast */
       }
     </style>
   </head>
   <body>
     <header>
       <div class="navbar">
+        <img
+          src="img/logo/DALL·E 2024-10-17 22.29.58 - A modern and minimalist logo design featuring the initials 'J' and 'S'. The letters should be intertwined or creatively connected, with clean lines an.jpg"
+          class="logo"
+          alt="logo"
+        />
         <ul class="menu">
           <li>
             <a href="#">Interesses</a>
             <ul>
-              <li class="KleurInNavBar"><a href="#">Metal Meetings</a></li>
-              <li class="KleurInNavBar"><a href="#">MxGP</a></li>
-              <li class="KleurInNavBar"><a href="#">LineDance</a></li>
+              <li><a href="#">Metal Meetings</a></li>
+              <li><a href="#">MxGP</a></li>
+              <li><a href="#">LineDance</a></li>
             </ul>
           </li>
           <li>
             <a href="#">Hobby's</a>
             <ul>
-              <li class="KleurInNavBar"><a href="#">Fitness</a></li>
-              <li class="KleurInNavBar"><a href="#">Fietsen</a></li>
+              <li><a href="#">Fitness</a></li>
+              <li><a href="#">Fietsen</a></li>
             </ul>
           </li>
           <li><a href="#">CV</a></li>
@@ -132,33 +180,48 @@
       </div>
     </header>
 
-    <main class="NaamEnIntro">
-      <h1>Meet Jelle Sels:</h1>
-      <p>
-        Hallo, ik ben Jelle. Op deze plek kun je meer over mij ontdekken, mijn
-        hobby's en interesses. Maar ook de projecten waaraan ik werk. Als Full Stack
-        Developer in opleiding ben ik gefascineerd door het volledige proces van
-        softwareontwikkeling, van het ontwerp tot de implementatie en het
-        onderhoud. Deze website is volledig handmatig gecodeerd, zonder gebruik
-        te maken van frameworks zoals Bootstrap of Tailwind.
-        Hier deel ik niet alleen mijn technische vaardigheden, maar ook mijn
-        leerproces en de uitdagingen die ik tegenkom. Neem gerust een kijkje
-        rond om meer te leren over mijn ervaringen, projecten en interesses. Of
-        je nu een medestudent bent, een toekomstige werkgever, of gewoon iemand
-        die nieuwsgierig is, ik hoop dat je iets waardevols kunt vinden op mijn
-        site. Bedankt voor je bezoek en ik kijk ernaar uit om mijn reis met jou
-        te delen!
-      </p>
-    </main>
+    <main class="grid-container">
+      <div class="linkerkant">
+        <h1>Meet Jelle Sels:</h1>
+        <p>
+          Hallo, ik ben Jelle. Op deze plek kun je meer over mij ontdekken, mijn
+          hobby's en interesses. Maar ook de projecten waaraan ik werk. Als Full
+          Stack Developer in opleiding ben ik gefascineerd door het volledige
+          proces van softwareontwikkeling, van het ontwerp tot de implementatie
+          en het onderhoud. Deze website is volledig handmatig gecodeerd, zonder
+          gebruik te maken van frameworks zoals Bootstrap of Tailwind. Hier deel
+          ik niet alleen mijn technische vaardigheden, maar ook mijn leerproces
+          en de uitdagingen die ik tegenkom. Neem gerust een kijkje rond om meer
+          te leren over mijn ervaringen, projecten en interesses. Of je nu een
+          medestudent bent, een toekomstige werkgever, of gewoon iemand die
+          nieuwsgierig is, ik hoop dat je iets waardevols kunt vinden op mijn
+          site. Bedankt voor je bezoek en ik kijk ernaar uit om mijn reis met
+          jou te delen!
+        </p>
+      </div>
 
-    <div class="images">
-      <!-- Afbeeldingen van jezelf en interesses -->
-      <img src="img/Mezelf/Afbeelding kringwinkel.jpg" alt="Afbeelding kringwinkel">
-      <img src="img/Mezelf/afbeelding mezelf 2.jpg" alt="Afbeelding mezelf">
-      <img src="img/Interesses/Metal meetings/Graspop afbeelding 1.jpg" alt="Afbeelding Graspop">
-      <img src="img/Interesses/MxGP/mxGP afbeelding 1.jpg" alt="Afbeelding MxGP">
-      <img src="img/Interesses/MxGP/mxGP afbeelding 4.jpg" alt="Afbeelding MxGP 2">
-      <img src="img/Interesses/Metal meetings/afbeelind graspop 5.jpg" alt="Afbeelding fietsen">
-    </div>
+      <div class="rechterkant">
+        <img
+          src="img/Interesses/MxGP/mxGP afbeelding 4.jpg"
+          class="images"
+          alt="MxGP afbeelding"
+        />
+        <img
+          src="img/Interesses/Metal meetings/afbeelind graspop 5.jpg"
+          class="images"
+          alt="Graspop afbeelding"
+        />
+        <img
+          src="img/Interesses/Metal meetings/Graspop afbeelding 1.jpg"
+          class="images"
+          alt="Graspop afbeelding"
+        />
+        <img
+          src="img/Mezelf/afbeelding mezelf 2.jpg"
+          class="images"
+          alt="Foto van mezelf"
+        />
+      </div>
+    </main>
   </body>
 </html>
