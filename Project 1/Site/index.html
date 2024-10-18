@@ -3,174 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kleur bovenkant pagina</title>
-    <style>
-      /* Stijl voor de body */
-      body {
-        font-family: Arial, Helvetica, sans-serif;
-        background-color: #f0f0f0; /* Lichtere achtergrond voor de hele pagina */
-        margin: 0;
-        padding: 0;
-      }
-
-      /* Stijl voor de header */
-      .navbar {
-        background-color: #333; /* Donkerdere kleur voor de navigatie */
-        padding: 15px 20px; /* Meer ruimte */
-        color: white;
-        width: 80%;
-        margin: 0 auto;
-        display: flex;
-        align-items: center; /* Centraal uitlijnen van het logo en menu */
-        justify-content: space-between; /* Ruimte tussen logo en menu */
-      }
-
-      .menu {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-      }
-
-      .menu li {
-        position: relative;
-        margin-right: 30px; /* Iets minder ruimte tussen menu-items */
-      }
-
-      .menu ul {
-        position: absolute;
-        top: 100%;
-        text-align: right;
-        width: 150px;
-        border: 1px solid #000;
-        display: none;
-        background-color: #333; /* Achtergrondkleur voor submenu */
-        z-index: 1;
-      }
-
-      .menu ul li {
-        float: none;
-        margin: 0;
-        padding: 0;
-      }
-
-      .menu a:link,
-      .menu a:visited {
-        display: block;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 1em;
-        font-weight: bold;
-        text-align: left;
-        text-decoration: none;
-        color: lightcoral;
-        padding: 10px 15px; /* Meer padding voor beter uiterlijk */
-      }
-
-      .menu a:hover {
-        background-color: lightcoral; /* Achtergrondkleur bij hover */
-        color: white; /* Tekstkleur bij hover */
-      }
-
-      .menu li:hover > ul {
-        display: block;
-      }
-
-      /* Grid systeem voor de hoofdcontainer */
-      .grid-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr; /* Twee kolommen */
-        gap: 20px;
-        padding: 20px;
-        width: 100%;
-        box-sizing: border-box;
-      }
-
-      /* Responsive lay-out voor mobiele apparaten */
-      @media (max-width: 768px) {
-        .grid-container {
-          grid-template-columns: 1fr; /* Enkele kolom op mobiele apparaten */
-        }
-      }
-
-      /* Stijl voor de linker div */
-      .linkerkant {
-        background-color: #6baed6;
-        padding: 30px;
-        text-align: left;
-        font-size: 18px;
-        color: white;
-        line-height: 1.6;
-        border-radius: 10px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      }
-
-      .linkerkant h1 {
-        font-size: 2.2em;
-        margin-bottom: 20px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-      }
-
-      .linkerkant p {
-        color: #f2f2f2;
-        font-size: 1.1em;
-      }
-
-      /* Stijl voor de rechter div */
-      .rechterkant {
-        background-color: lightcoral;
-        padding: 20px;
-        border-radius: 10px;
-        display: grid;
-        grid-template-columns: 1fr 1fr; /* Twee kolommen voor de afbeeldingen */
-        gap: 10px; /* Ruimte tussen de afbeeldingen */
-        justify-items: center;
-      }
-
-      /* Responsive voor de afbeeldingen */
-      @media (max-width: 768px) {
-        .rechterkant {
-          grid-template-columns: 1fr; /* Enkele kolom op mobiele apparaten */
-        }
-      }
-
-      /* Afbeeldingsstijl */
-      .images {
-        width: 100%; /* Maak afbeeldingen responsief */
-        height: auto;
-        border-radius: 10px;
-        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-      }
-
-      /* Logo styling */
-      .logo {
-        width: 150px; /* Specifieke breedte voor het logo */
-        height: auto; /* Zorg ervoor dat de hoogte automatisch wordt aangepast */
-      }
-    </style>
+    <title>Meetjelle</title>
+    <link rel="stylesheet" href="css.css" />
   </head>
   <body>
     <header>
       <div class="navbar">
-        <img
-          src="img/logo/DALL·E 2024-10-17 22.29.58 - A modern and minimalist logo design featuring the initials 'J' and 'S'. The letters should be intertwined or creatively connected, with clean lines an.jpg"
-          class="logo"
-          alt="logo"
-        />
+        <img src="img/logo/Logo JS.jpg" class="logo" alt="logo" />
         <ul class="menu">
           <li>
             <a href="#">Interesses</a>
-            <ul>
-              <li><a href="#">Metal Meetings</a></li>
-              <li><a href="#">MxGP</a></li>
-              <li><a href="#">LineDance</a></li>
-            </ul>
           </li>
           <li>
-            <a href="#">Hobby's</a>
-            <ul>
-              <li><a href="#">Fitness</a></li>
-              <li><a href="#">Fietsen</a></li>
-            </ul>
+            <a href="Hobbys.html">Hobby's</a>
           </li>
           <li><a href="#">CV</a></li>
           <li><a href="#">Projecten</a></li>
@@ -201,21 +46,6 @@
       </div>
 
       <div class="rechterkant">
-        <img
-          src="img/Interesses/MxGP/mxGP afbeelding 4.jpg"
-          class="images"
-          alt="MxGP afbeelding"
-        />
-        <img
-          src="img/Interesses/Metal meetings/afbeelind graspop 5.jpg"
-          class="images"
-          alt="Graspop afbeelding"
-        />
-        <img
-          src="img/Interesses/Metal meetings/Graspop afbeelding 1.jpg"
-          class="images"
-          alt="Graspop afbeelding"
-        />
         <img
           src="img/Mezelf/afbeelding mezelf 2.jpg"
           class="images"

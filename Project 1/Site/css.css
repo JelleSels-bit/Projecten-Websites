@@ -1,0 +1,214 @@
+
+/* Stijl voor de body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: lightgray; /* Lichtere achtergrond voor de hele pagina */
+  margin: 0;
+  padding: 0;
+}
+
+/* Stijl voor de header */
+.navbar {
+  background-color: #401414; /* Donkerdere kleur voor de navigatie */
+  padding: 15px 20px; /* Meer ruimte */
+  color: white;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center; /* Centraal uitlijnen van het logo en menu */
+  justify-content: space-between; /* Ruimte tussen logo en menu */
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu li {
+  position: relative;
+  margin-right: 30px; /* Iets minder ruimte tussen menu-items */
+}
+
+.menu ul {
+  position: absolute;
+  top: 100%;
+  text-align: right;
+  width: 150px;
+  border: 1px solid #000;
+  display: none;
+  background-color: #333; /* Achtergrondkleur voor submenu */
+  z-index: 1;
+}
+
+.menu ul li {
+  float: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a:link,
+.menu a:visited {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+  text-decoration: none;
+  color: #D93636;
+  padding: 10px 15px; /* Meer padding voor beter uiterlijk */
+}
+
+.menu a:hover {
+  background-color: lightcoral; /* Achtergrondkleur bij hover */
+  color: white; /* Tekstkleur bij hover */
+}
+
+.menu li:hover > ul {
+  display: block;
+}
+
+/* Grid systeem voor de hoofdcontainer */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Twee kolommen */
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Responsive lay-out voor mobiele apparaten */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Enkele kolom op mobiele apparaten */
+  }
+}
+
+/* Stijl voor de linker div */
+.linkerkant {
+  background-color: #401414;
+  padding: 30px;
+  text-align: left;
+  font-size: 18px;
+  color: white;
+  line-height: 1.6;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.linkerkant h1 {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  color:white;
+}
+
+.linkerkant p {
+  color: white;
+  font-size: 1.1em;
+}
+
+/* Stijl voor de rechter div */
+.rechterkant {
+  background-color: #8C162C;
+  padding: 20px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;  /* Centreert de afbeelding horizontaal */
+  align-items: center;    /* Centreert de afbeelding verticaal */
+  }
+
+/* Responsive voor de afbeeldingen */
+@media (max-width: 768px) {
+  .rechterkant {
+    grid-template-columns: 1fr; /* Enkele kolom op mobiele apparaten */
+  }
+}
+
+/* Afbeeldingsstijl */
+.images {
+  width: 100%; /* Maak afbeeldingen responsief */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  display: block;
+  
+  
+}
+
+/* Logo styling */
+.logo {
+  width: 150px; /* Specifieke breedte voor het logo */
+  height: auto; /* Zorg ervoor dat de hoogte automatisch wordt aangepast */
+}
+
+
+/* Alle Sub paginas */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3, h4, h5 {
+    color: white;
+}
+
+h2 {
+    border-bottom: 2px solid #5a8dee;
+    padding-bottom: 10px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+.day {
+
+    padding: 10px;
+    margin: 10px 0;
+    border: 5px solid black;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+strong {
+  color: white;
+}
+
+/* Flexbox Voor Pagina Hobby's  */
+.rechterkantsubpagina{
+  display: flex;
+  flex-wrap: wrap; /* Laat de afbeeldingen naar de volgende regel springen als ze niet passen */
+  justify-content: space-between; /* Zorgt voor ruimte tussen de afbeeldingen */
+  gap: 10px; /* Voegt een ruimte toe tussen de afbeeldingen */
+}
+
+.images {
+  width: calc(50% - 10px); /* Zorgt ervoor dat elke afbeelding de helft van de containerbreedte beslaat min de ruimte */
+  max-width: 100%; /* Maakt afbeeldingen responsief */
+  height: auto; /* Zorgt ervoor dat de hoogte automatisch wordt aangepast aan de breedte */
+}
+
+
