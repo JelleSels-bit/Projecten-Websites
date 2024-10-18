@@ -2,7 +2,7 @@
 /* Stijl voor de body */
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: lightgray; /* Lichtere achtergrond voor de hele pagina */
+  background-color: lightgreen; /* Lichtere achtergrond voor de hele pagina */
   margin: 0;
   padding: 0;
 }
@@ -193,7 +193,7 @@ ul {
     margin-left: 20px;
 }
 
-strong {
+strong {  
   color: white;
 }
 
@@ -203,12 +203,61 @@ strong {
   flex-wrap: wrap; /* Laat de afbeeldingen naar de volgende regel springen als ze niet passen */
   justify-content: space-between; /* Zorgt voor ruimte tussen de afbeeldingen */
   gap: 10px; /* Voegt een ruimte toe tussen de afbeeldingen */
+  background-color: #8C162C;
+  padding: 5px;
 }
 
 .images {
   width: calc(50% - 10px); /* Zorgt ervoor dat elke afbeelding de helft van de containerbreedte beslaat min de ruimte */
   max-width: 100%; /* Maakt afbeeldingen responsief */
   height: auto; /* Zorgt ervoor dat de hoogte automatisch wordt aangepast aan de breedte */
+}
+
+
+/* Contact Pagina */
+
+/* Stijl voor het contactformulier */
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  display: flex; /* Gebruik flexbox om items naast elkaar te plaatsen */
+  align-items: center; /* Zorgt ervoor dat de items verticaal gecentreerd zijn */
+  margin-bottom: 15px;
+}
+
+label {
+  flex: 0 0 150px; /* Vaste breedte voor labels */
+  margin-right: 15px; /* Ruimte tussen label en invoerveld */
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  flex: 1; /* Laat invoervelden de resterende ruimte innemen */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #401414; /* Kleur van je navbar */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #8C162C; /* Iets lichtere kleur bij hover */
 }
 
 
