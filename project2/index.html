@@ -10,6 +10,10 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
     <style>
       /* Achtergrondafbeelding instellingen */
       .bg-image {
@@ -48,119 +52,140 @@
       .intro {
         margin-top: 150px;
       }
+
+      .socials {
+        align-items: center;
+      }
     </style>
   </head>
   <body class="bg-dark">
-    <div class="bg-image content">
-      <main class="container">
+    <div class="bg-image">
+      <div class="overlay"></div>
+      <!-- Overlay hier geplaatst binnen bg-image -->
+      <main class="container content">
+        <!-- Inhoud nu binnen de content div -->
+        <nav
+          class="navbar navbar-expand-lg"
+          style="position: relative; z-index: 3"
+        >
+          <div class="container-fluid">
+            <a class="navbar-brand text-light fw-bold me-auto" href="index.html"
+              >Sels</a
+            >
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon bg-light"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto gap-4 lg">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active text-light fw-bold"
+                    aria-current="page"
+                    href="#"
+                    >Hobby's</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active text-light fw-bold"
+                    aria-current="page"
+                    href="#"
+                    >Interesses</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active text-light fw-bold"
+                    aria-current="page"
+                    href="#"
+                    >Ervaringen</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active text-light fw-bold"
+                    aria-current="page"
+                    href="#"
+                    >Projecten</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active text-light fw-bold"
+                    aria-current="page"
+                    href="#"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div class="row intro">
+          <div class="col-6">
+            <img
+              src="img/Mezelf/afbeelding mezelf 2.jpg"
+              class="img-fluid"
+              alt=""
+            />
+          </div>
+          <div class="col">
+            <h2>Hi! I'm Jelle</h2>
+            <hr />
+            <h2>A Full Stack Developer in the Making.</h2>
 
-        <div class="overlay"></div>
+            <p class="pt-2">
+              Currently i am building a strong foundation in web and software
+              development, focusing particularly on back-end technologies. My
+              primary interests include creating efficient and secure back-end
+              solutions, especially using C# and JavaScript.
+            </p>
+            <hr />
+            <p>
+              I enjoy the logic-heavy aspects of development, such as working
+              with databases and building APIs that serve as the backbone of
+              applications. Constantly learning and improving my skills in
+              server-side programming, I am excited to master the frameworks and
+              tools that facilitate clean and maintainable code.
+            </p>
+            <hr />
+            <p>
+              From understanding complex algorithms to ensuring smooth data
+              flow, I find satisfaction in developing back-end systems that
+              enhance user experiences on the front end. My goal is to become a
+              well-rounded developer, capable of navigating both sides of the
+              stack while delivering seamless, high-performance applications.
+            </p>
 
-      <nav
-        class="navbar navbar-expand-lg"
-        style="position: relative; z-index: 3"
-      >
-        <div class="container-fluid">
-          <a class="navbar-brand text-light fw-bold me-auto" href="index.html"
-            >Sels</a
-          >
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon bg-light"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto gap-4 lg">
-              <li class="nav-item">
-                <a
-                  class="nav-link active text-light fw-bold"
-                  aria-current="page"
-                  href="#"
-                  >Hobby's</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link active text-light fw-bold"
-                  aria-current="page"
-                  href="#"
-                  >Interesses</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link active text-light fw-bold"
-                  aria-current="page"
-                  href="#"
-                  >Ervaringen</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link active text-light fw-bold"
-                  aria-current="page"
-                  href="#"
-                  >Projecten</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link active text-light fw-bold"
-                  aria-current="page"
-                  href="#"
-                  >Contact</a
-                >
-              </li>
-            </ul>
+            <a class="ms-5" href="https://github.com"
+              ><i class="fa-brands fa-github fa-3x" style="color: red"></i
+            ></a>
+            <a class="ms-5" href="https://nl.linkedin.com"
+              ><i class="fa-brands fa-linkedin fa-3x" style="color: red"></i
+            ></a>
+            <a class="ms-5" href="https://x.com/?lang=nl"
+              ><i
+                class="fa-brands fa-square-x-twitter fa-3x"
+                style="color: red"
+              ></i
+            ></a>
+            <a class="ms-5" href="https://www.instagram.com"
+              ><i
+                class="fa-brands fa-square-instagram fa-3x"
+                style="color: red"
+              ></i
+            ></a>
           </div>
         </div>
-      </nav>
-
-      <div class="row intro">
-        <div class="col-6 content">
-          <img
-            src="img/Mezelf/Afbeelding kringwinkel.jpg"
-            class="img-fluid"
-            alt=""
-          />
-        </div>
-        <div class="col content">
-          <h2>Hi! I'm Jelle</h2>
-          <hr />
-          <h2>A Full Stack Developer in the Making.</h2>
-
-          <p class="pt-2">
-            As a full-stack developer in the making, I am building a strong
-            foundation in web and software development, focusing particularly on
-            back-end technologies. My primary interests include creating
-            efficient, scalable, and secure back-end solutions, especially using
-            C# and JavaScript.
-          </p>
-          <hr />
-          <p>
-            I enjoy the logic-heavy aspects of development, such as working with
-            databases and building APIs that serve as the backbone of big
-            applications. Constantly learning and improving my skills in
-            server-side programming, I am excited to master the frameworks and
-            tools that facilitate clean and maintainable code.
-          </p>
-          <hr />
-          <p>
-            From understanding complex algorithms to ensuring smooth data flow,
-            I find satisfaction in developing back-end systems that enhance user
-            experiences on the front end. My goal is to become a well-rounded
-            developer, capable of navigating both sides of the stack while
-            delivering seamless, high-performance applications.
-          </p>
-        </div>
-      </div>
+      </main>
     </div>
 
     <script
@@ -168,10 +193,5 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-
-
-
-      </main>
-      
   </body>
 </html>
