@@ -1,24 +1,24 @@
 /* Basis reset en globale instellingen */
 * {
-  box-sizing: border-box; /* Zorgt ervoor dat padding en margin de totale breedte/hoogte beïnvloeden */
+  box-sizing: border-box; 
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: white; /* Lichtere achtergrond voor de hele pagina */
+  background-color: white; 
   margin: 0;
   padding: 0;
 }
 
 /* Stijl voor de header */
 .navbar {
-  background-color: #401414; /* Donkerdere kleur voor de navigatie */
+  background-color: #401414; 
   align-items: center;
   color: white;
-  width: 100%; /* Volledige breedte van de pagina */
+  width: 100%; 
   display: flex;
-  flex-wrap: wrap; /* Zorgt ervoor dat het menu op kleinere schermen samenvouwt */
-  justify-content: space-between; /* Ruimte tussen logo en menu */
+  flex-wrap: wrap; 
+  justify-content: space-between; 
 }
 
 .menu {
@@ -26,24 +26,24 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  flex-wrap: wrap; /* Zorgt ervoor dat de menu-items zich aanpassen aan de breedte */
+  flex-wrap: wrap; 
 }
 
 .menu li {
   position: relative;
-  margin-right: 15px; /* Iets minder ruimte tussen menu-items */
+  margin-right: 15px; 
 }
 
 .menu a:link,
 .menu a:visited {
   display: block;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 24px; /* Kleinere tekst op mobiele apparaten */
+  font-size: 24px; 
   font-weight: bold;
   text-align: left;
   text-decoration: none;
   color: #d93636;
-  padding: 10px 15px; /* Meer padding voor beter uiterlijk */
+  padding: 10px 15px;
 }
 
 .menu a:hover {
@@ -190,7 +190,7 @@ strong {
 
 /* Responsiviteit op mobile: */
 
-/* Responsive aanpassingen voor de navbar */
+/* Responsive  navbar */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column; 
@@ -222,7 +222,7 @@ strong {
   }
 }
 
-/* Responsive lay-out voor mobiele apparaten */
+/* Responive grid container */
 @media (max-width: 768px) {
   .grid-container {
     grid-template-columns: 1fr; 
@@ -245,7 +245,7 @@ strong {
     font-size: 0.9em; 
   }
 
-  /* Zorg dat afbeeldingen altijd responsief zijn */
+  
   .images {
     width: 100%; 
     height: auto; 
@@ -257,24 +257,5 @@ strong {
   }
 }
 
-/* Flexbox Voor Pagina Hobby's  */
-.rechterkantsubpagina {
-  display: flex;
-  flex-wrap: wrap; 
-  justify-content: space-between; 
-  gap: 10px; 
-  padding: 20px;
-}
 
-.images {
 
-  max-width: 100%; 
-  height: auto; 
-}
-
-/* Responsive aanpassingen voor hobby pagina */
-@media (max-width: 768px) {
-  .images {
-    width: 100%; 
-  }
-}
