@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Meet Jelle</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <style>
+      /* Achtergrondafbeelding instellingen */
+      .bg-image {
+        background-image: url("img/papers.co-mf29-cosmos-red-night-live-lake-space-starry-25-wallpaper.jpg"); /* Vervang dit met de juiste afbeelding */
+        background-size: cover; /* Zorgt ervoor dat de afbeelding de hele achtergrond bedekt */
+        background-position: center; /* Positioneert de afbeelding in het midden */
+        min-height: 100vh; /* Zorgt ervoor dat het gedeelte de volledige hoogte van het scherm heeft */
+        position: relative; /* Zorg ervoor dat de z-index werkt */
+        z-index: 1; /* Zet de achtergrondafbeelding op een lagere laag */
+      }
+
+      /* Overlay voor betere leesbaarheid */
+      .overlay {
+        position: absolute; /* Absoluut positioneren ten opzichte van de bg-image */
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.5
+        ); /* Donkere overlay voor beter contrast */
+        z-index: 2; /* Overlay heeft een hogere z-index dan de achtergrond */
+      }
+
+      /* Inhoud boven de overlay */
+      .content {
+        position: relative; /* Dit zorgt ervoor dat de inhoud boven de overlay staat */
+        z-index: 3; /* Inhoud heeft de hoogste z-index */
+        color: white; /* Witte tekstkleur */
+        padding: 20px; /* Ruimte rond de tekst */
+      }
+
+      .intro {
+        margin-top: 150px;
+      }
+
+      .socials {
+        margin-left: 100px;
+      }
+    </style>
+  </head>
+  <body class="bg-dark">
+    <div class="bg-image img-fluid">
+      <div class="overlay"></div>
+
+      <!-- Here start the main.container-->
+      <main class="container content">
+        <!-- NavBar -->
+        <nav
+          class="navbar navbar-expand-lg"
+          style="position: relative; z-index: 3"
+        >
+          <div class="container-fluid">
+            <a
+              class="navbar-brand text-danger fw-bold me-auto fs-1"
+              href="index.html"
+              >Jelle</a
+            >
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon bg-light"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto gap-4 lg">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active text-light fw-semibold fs-4"
+                    aria-current="page"
+                    href="index.html"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active text-danger border-bottom border-danger fw-semibold fs-4"
+                    aria-current="page"
+                    href="hobby.html"
+                    >Hobby</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active text-light fw-semibold fs-4"
+                    aria-current="page"
+                    href="interesses.html"
+                    >Interesses</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active text-light fw-semibold fs-4"
+                    aria-current="page"
+                    href="ervaringen.html"
+                    >Ervaringen</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active text-light fw-semibold fs-4"
+                    aria-current="page"
+                    href="projecten.html"
+                    >Projecten</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active text-light fw-semibold fs-4"
+                    aria-current="page"
+                    href="#"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Text / picture on this page -->
+
+        <!-- Rij over Fitness -->
+        <div class="row intro">
+          <div class="col-lg-6">
+            <img
+              class="rounded-circle mt-4 img-fluid"
+              src="img/DALL·E 2024-10-30 12.53.53 -ts, and the.png.webp"
+              alt="This is an animated picture of myself. The style is based off anime / cartoon"
+            />
+          </div>
+          <div class="col-lg-6">
+            <h1>Fitness:</h1>
+            <p>
+              I started my fitness journey in the summer of 2023. My friend and
+              I aim to work out three times a week (Monday, Wednesday, and
+              Friday). Since we only go three times a week, we focus on a
+              full-body workout. This means that over these three days, we
+              target and train all the major muscle groups.
+            </p>
+
+            <p>
+              So far, the heaviest weight I've managed on the supine bench press
+              is 160 kg (about 352 lbs) for 12 reps. It's a big achievement for
+              me, and I'm working hard to improve my strength and form each
+              week.
+            </p>
+
+            <p>
+              Our workouts include exercises for the chest, back, shoulders, and
+              core. We try to keep a balanced approach, making sure each muscle
+              group gets enough attention without overtraining. In addition to
+              the strength training, we also focus on proper warm-ups and
+              cool-downs to prevent injuries and keep our bodies flexible.
+            </p>
+
+            <p>
+              My goal is to keep pushing my limits and hopefully reach new
+              personal bests in the coming months. Staying consistent with the
+              routine is challenging, but having a workout partner keeps me
+              motivated and accountable.
+            </p>
+
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button bg-dark text-light fw-semibold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    Day 1:
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body bg-dark text-light">
+                    <ul>
+                      <li>
+                        Chest exercises: <br />
+                        - Inclined Dumbell press 3 x 12 <br />
+                        - Supine bench press 3 x 12 <br />
+                        - Pec Fly 3 x 12 <br />
+                      </li>
+
+                      <li>
+                        Shoulder exercises: <br />
+                        - Rotator cuff Inside 2 x 15 (lightweight) <br />
+                        - Rotator cuff Outside 2 x 15 (lightweight) <br />
+                      </li>
+
+                      <li>
+                        Tricep exercises: <br />
+                        - Tricep extension 3 x 12 <br />
+                        - Overhead Tricep extension 3 x12 <br />
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed bg-dark text-light fw-semibold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    Day 2:
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body bg-dark text-light">
+                    <ul>
+                      <li>
+                        Back exercises: <br />
+                        - Lat pull down 3 x 12 <br />
+                        - Seated row 3 x 12 <br />
+                        - Dumbell row 3 x 12 <br />
+                      </li>
+
+                      <li>
+                        Bicep exercises: <br />
+                        - Hammer curls 3 x 12 <br />
+                        - One handed Preacher curl 3 x 12 <br />
+                        - Barbell curl 3 x 12 <br />
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed bg-dark text-light fw-semibold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    Day 3:
+                  </button>
+                </h2>
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body bg-dark text-light">
+                    <ul>
+                      <li>
+                        Back exercises: <br />
+                        - Pull ups 3 x 12 <br />
+                        - Kroc row <br />
+                      </li>
+
+                      <li>
+                        Other exercises: <br />
+                        - Supine bench press 3 x 12 <br />
+                        - Overhead cable curls 3 x 12 <br />
+                        - Diamond push ups To failure <br />
+                        - Goblet Squat <br />
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rij over Fietsen -->
+        <div class="row intro">
+          <div class="col-lg-6">
+            <img
+              class="rounded-circle mt-4 img-fluid"
+              src="img/DALL·E 2024-10-30 12.53.53 -ts, and the.png.webp"
+              alt="This is an animated picture of myself. The style is based off anime / cartoon"
+            />
+          </div>
+          <div class="col-lg-6">
+            <h1>Fitness:</h1>
+            <p>
+              I started my fitness journey in the summer of 2023. My friend and
+              I aim to work out three times a week (Monday, Wednesday, and
+              Friday). Since we only go three times a week, we focus on a
+              full-body workout. This means that over these three days, we
+              target and train all the major muscle groups.
+            </p>
+
+            <p>
+              So far, the heaviest weight I've managed on the supine bench press
+              is 160 kg (about 352 lbs) for 12 reps. It's a big achievement for
+              me, and I'm working hard to improve my strength and form each
+              week.
+            </p>
+
+            <p>
+              Our workouts include exercises for the chest, back, shoulders,
+              legs, and core. We try to keep a balanced approach, making sure
+              each muscle group gets enough attention without overtraining. In
+              addition to the strength training, we also focus on proper
+              warm-ups and cool-downs to prevent injuries and keep our bodies
+              flexible.
+            </p>
+
+            <p>
+              My goal is to keep pushing my limits and hopefully reach new
+              personal bests in the coming months. Staying consistent with the
+              routine is challenging, but having a workout partner keeps me
+              motivated and accountable.
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
