@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Meet Jelle</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <style>
+      /* Achtergrondafbeelding instellingen */
+      .bg-image {
+        background-image: url("img/papers.co-mf29-cosmos-red-night-live-lake-space-starry-25-wallpaper.jpg"); /* Vervang dit met de juiste afbeelding */
+        background-size: cover; /* Zorgt ervoor dat de afbeelding de hele achtergrond bedekt */
+        background-position: center; /* Positioneert de afbeelding in het midden */
+        min-height: 100vh; /* Zorgt ervoor dat het gedeelte de volledige hoogte van het scherm heeft */
+        position: relative; /* Zorg ervoor dat de z-index werkt */
+        z-index: 1; /* Zet de achtergrondafbeelding op een lagere laag */
+      }
+
+      /* Overlay voor betere leesbaarheid */
+      .overlay {
+        position: absolute; /* Absoluut positioneren ten opzichte van de bg-image */
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.5
+        ); /* Donkere overlay voor beter contrast */
+        z-index: 2; /* Overlay heeft een hogere z-index dan de achtergrond */
+      }
+
+      /* Inhoud boven de overlay */
+      .content {
+        position: relative; /* Dit zorgt ervoor dat de inhoud boven de overlay staat */
+        z-index: 3; /* Inhoud heeft de hoogste z-index */
+        color: white; /* Witte tekstkleur */
+        padding: 20px; /* Ruimte rond de tekst */
+      }
+
+      .intro {
+        margin-top: 150px;
+      }
+
+      .socials {
+        margin-left: 100px;
+      }
+
+      .zoom-container {
+        overflow: hidden; /* Zorgt ervoor dat de afbeelding niet buiten het kader komt */
+      }
+
+      .zoom img {
+        transition: transform 0.8s ease; /* Maakt de overgang soepel */
+        width: 100%; /* Zorgt ervoor dat de afbeelding zich aanpast aan de container */
+        display: block; /* Zorgt ervoor dat er geen ruimte onder de afbeelding is */
+        margin-top: 70px;
+      }
+
+      .zoom img:hover {
+        transform: scale(1.8); /* Zoomt in op de afbeelding bij hover */
+      }
+      
+    </style>
+  </head>
+  <body class="bg-dark">
+    <div class="bg-image img-fluid">
+      <div class="overlay"></div>
+
+      <!-- Here start the main.container-->
+      <main class="container content">
+        <!-- NavBar -->
+        <nav
+          class="navbar navbar-expand-lg"
+          style="position: relative; z-index: 3"
+        >
+          <div class="container-fluid">
+            <a
+              class="navbar-brand text-danger fw-bold me-auto fs-1"
+              href="index.html"
+              >Jelle</a
+            >
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon bg-light"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto gap-4 lg">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active text-light fw-semibold fs-4"
+                    aria-current="page"
+                    href="index.html"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active text-light semibold fs-4"
+                    aria-current="page"
+                    href="hobby.html"
+                    >Hobby</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active text-danger border-bottom border-danger fw fw-semibold fs-3"
+                    aria-current="page"
+                    href="interesses.html"
+                    >Interesses</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active text-light fw-semibold fs-4"
+                    aria-current="page"
+                    href="ervaringen.html"
+                    >Ervaringen</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active text-light fw-semibold fs-4"
+                    aria-current="page"
+                    href="projecten.html"
+                    >Projecten</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active text-light fw-semibold fs-4"
+                    aria-current="page"
+                    href="#"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Text / picture on this page -->
+
+        <!-- Rij over Graspop -->
+        <div class="row intro">
+          <div class="col-lg-6">
+            <div id="carouselGraspop" class="carousel slide">
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselGraspop"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselGraspop"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselGraspop"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselGraspop"
+                  data-bs-slide-to="3"
+                  aria-label="Slide 4"
+                ></button>
+              </div>
+              <div class="carousel-inner ratio ratio-4x3">
+                <div class="carousel-item active">
+                  <img
+                    src="img/Interesses/Metal meetings/afbeelding graspop.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item ratio ratio-4x3">
+                  <img
+                    src="img/Interesses/Metal meetings/afbeelind graspop 5.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item ratio ratio-4x3">
+                  <img
+                    src="img/Interesses/Metal meetings/afbeelding graspop 4.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+
+                <div class="carousel-item ratio ratio-4x3">
+                  <img
+                    src="img/Interesses/Metal meetings/Graspop afbeelding 1.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselGraspop"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselGraspop"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h2>Metal Meetings:</h2>
+
+            <p>
+              I've been listening to metal and rock for quite a while, and in
+              2024, I finally made it to the Graspop Metal Meeting festival. It
+              was an incredible experience—much more than I had imagined. The
+              music was electrifying, and the atmosphere was even better than I
+              expected.
+            </p>
+
+            <p>
+              Before attending, I assumed the crowd would be intimidating: tall,
+              rugged guys around 6 feet 2, as broad as an American pickup truck,
+              and covered in tattoos. But in reality, these people turned out to
+              be some of the friendliest festival-goers you could meet. There
+              was a real sense of community, where everyone looked out for one
+              another. My dad volunteered at the festival that year, helping to
+              catch crowdsurfers near the main stage—a job that's both exciting
+              and a bit unpredictable, given the energy of the crowd!
+            </p>
+
+            <p>
+              Beyond Graspop, I'm already planning for other festivals. My list
+              for 2025 and beyond includes Alcatraz, Wacken Open Air, Bloodstock
+              Open Air, and Rock Werchter. Each of these festivals has its own
+              unique vibe, and I'm excited to experience the different music
+              lineups, meet other fans, and just immerse myself in the metal
+              culture. One day, I hope to make it to Download Festival in the UK
+              as well, which is another iconic event for metal lovers worldwide.
+            </p>
+
+            <p>
+              For me, going to these festivals is more than just hearing live
+              music. It's about connecting with a global community of people who
+              share a love for the genre, where even strangers become friends in
+              a matter of hours. I can't wait to add more unforgettable memories
+              to my festival journey!
+            </p>
+          </div>
+        </div>
+
+        <hr />
+
+        <!-- Rij over MXGP -->
+        <div class="row mt-5">
+          <!-- Carrousel MXGP -->
+          <div class="col-lg-6">
+            <div id="carouselMXGP" class="carousel slide">
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselMXGP"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselMXGP"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselMXGP"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselMXGP"
+                  data-bs-slide-to="3"
+                  aria-label="Slide 4"
+                ></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="img/Interesses/MxGP/mxgp afbeelding 1.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="img/Interesses/MxGP/mxGP afbeelding 2.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="img/Interesses/MxGP/mxGP afbeelding 3.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="img/Interesses/MxGP/mxGP afbeelding 4.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselMXGP"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselMXGP"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+
+            <div class="zoom">
+              <img
+                src="img/Interesses/MxGP/MXGP calender.jpg"
+                alt=""
+                class="img-fluid"
+              />
+            </div>
+          </div>
+          <div class="col">
+            <h2>How I Started Following MxGP</h2>
+
+            <p>
+              My journey into following MxGP began when I watched a documentary
+              about Jeffrey Herlings, which primarily highlighted his time in
+              the American motocross scene. Although he usually competes in the
+              European standings, I was truly inspired by his approach and
+              determination during those races. Since then, I've made it a point
+              to watch the races every weekend.
+            </p>
+
+            <h2>What is MxGP?</h2>
+
+            <p>
+              MxGP stands for Motocross Grand Prix. In a typical race, around 25
+              to 30 riders line up at the starting gate, ready to tackle a
+              challenging circuit filled with mud, hills, and various obstacles.
+              They race on four-stroke motorcycles, which are known for their
+              power and agility. The objective is to complete the course as
+              quickly as possible, navigating the ever-changing terrain.
+            </p>
+
+            <p>
+              The "GP" in MxGP stands for Grand Prix, representing the highest
+              accolade a rider can achieve on a specific track. Riders earn
+              points based on their finishing positions in each race. The
+              competitor with the most points at the end of the season is
+              crowned the champion.
+            </p>
+
+            <h2>MxGP:</h2>
+            <p>
+              Motocross is a physically demanding sport that tests both the
+              skill of the rider and the performance of the machine. The MxGP
+              series features a mix of outdoor and indoor tracks, with races
+              held in various countries around the world, showcasing diverse
+              landscapes and weather conditions.
+            </p>
+
+            <p>
+              The MxGP attracts some of the best motocross talent globally,
+              making it an exhilarating spectacle for fans. Beyond the
+              competitive aspect, the sport also fosters a vibrant community of
+              enthusiasts who share a passion for motorsports, often bringing
+              families together during race weekends.
+            </p>
+
+            <p>
+              With its thrilling action and intense rivalries, following MxGP
+              has not only provided me with entertainment but has also deepened
+              my appreciation for the dedication and athleticism involved in
+              motocross racing.
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
