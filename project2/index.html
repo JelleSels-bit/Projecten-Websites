@@ -56,6 +56,10 @@
       .socials {
         margin-left: 100px;
       }
+
+      .modal-backdrop {
+        z-index: -1020;
+      }
     </style>
   </head>
   <body class="bg-dark">
@@ -67,7 +71,7 @@
         <!-- NavBar -->
         <nav
           class="navbar navbar-expand-lg"
-          style="position: relative; z-index: 3"
+          style="position: relative; z-index: 2"
         >
           <div class="container-fluid">
             <a
@@ -128,13 +132,59 @@
                     >Projecten</a
                   >
                 </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link active text-light fw-semibold fs-4"
-                    aria-current="page"
-                    href="#"
-                    >Contact</a
+
+                <li>
+                  <!-- Button trigger modal -->
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
                   >
+                    Contact!
+                  </button>
+
+                  <!-- Modal -->
+                  <div
+                    class="modal fade"
+                    id="exampleModal"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                    style="z-index: 2"
+                  >
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1
+                            class="modal-title fs-5"
+                            id="exampleModalLabel"
+                          ></h1>
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <div class="modal-body">
+                          <form>
+                            <div class="mb-3">
+                              <label for="exampleFormControlInput1" class="form-label text-dark">Email address:</label>
+                              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="jelle.sels03@gmail.com">
+                            </div>
+                            <div class="mb-3">
+                              <label for="exampleFormControlTextarea1" class="form-label text-dark">Bericht:</label>
+                              <textarea class="form-control" id="exampleFormControlTextarea1" rows="16" placeholder="Hey, ik had een vraag over..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                              Submit
+                            </button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </li>
               </ul>
             </div>
