@@ -125,12 +125,12 @@
                     data-bs-toggle="modal"
                     data-bs-target="#exampleModal"
                   >
-                    Contact!
+                  <span class="badge text-light bg-dark fs-4">Contact!</span>
                   </button>
 
                   <!-- Modal -->
                   <div
-                    class="modal fade z-index: 2"
+                    class="modal fade"
                     id="exampleModal"
                     tabindex="-1"
                     aria-labelledby="exampleModalLabel"
@@ -155,33 +155,34 @@
                         </div>
                         <div class="modal-body bg-dark">
                           <form>
-                            <div class="mb-3">
+                            <div class="mb-3 bg-dark">
                               <label
-                                for="exampleFormControlInput1"
-                                class="form-label text-light"
+                                for="ContactFormulier"
+                                class="form-label text-light
+                                "
                                 >Email address:</label
                               >
                               <input
                                 type="email"
-                                class="form-control text-dark"
-                                id="exampleFormControlInput1"
+                                class="form-control"
+                                id="ContactFormulier"
                                 placeholder="jelle.sels03@gmail.com"
                               />
                             </div>
                             <div class="mb-3">
                               <label
-                                for="exampleFormControlTextarea1"
+                                for="ContactFormulier"
                                 class="form-label text-light"
                                 >Bericht:</label
                               >
                               <textarea
                                 class="form-control"
-                                id="exampleFormControlTextarea1"
+                                id="ContactFormulier"
                                 rows="16"
                                 placeholder="Hey, ik had een vraag over..."
                               ></textarea>
                             </div>
-                            <div class="modal-footer">
+                            <div class="modal-footer bg-dark">
                               <button type="button" class="btn btn-danger">
                                 Submit
                               </button>
@@ -211,9 +212,7 @@
             <hr />
             <h2>
               A
-              <span class="badge text-danger bg-light fs-2 "
-                >Full stack developer
-              </span>
+              Full Stack developer
               in the Making.
             </h2>
 
