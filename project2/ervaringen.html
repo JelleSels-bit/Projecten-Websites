@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Meet Jelle</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <style>
+      /* Achtergrondafbeelding instellingen */
+      .bg-image {
+        background-image: url("img/papers.co-mf29-cosmos-red-night-live-lake-space-starry-25-wallpaper.jpg"); /* Vervang dit met de juiste afbeelding */
+        background-size: cover; /* Zorgt ervoor dat de afbeelding de hele achtergrond bedekt */
+        background-position: center; /* Positioneert de afbeelding in het midden */
+        min-height: 100vh; /* Zorgt ervoor dat het gedeelte de volledige hoogte van het scherm heeft */
+        position: relative; /* Zorg ervoor dat de z-index werkt */
+        z-index: 1; /* Zet de achtergrondafbeelding op een lagere laag */
+      }
+
+      /* Overlay voor betere leesbaarheid */
+      .overlay {
+        position: absolute; /* Absoluut positioneren ten opzichte van de bg-image */
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.5
+        ); /* Donkere overlay voor beter contrast */
+        z-index: 2; /* Overlay heeft een hogere z-index dan de achtergrond */
+      }
+
+      /* Inhoud boven de overlay */
+      .content {
+        position: relative; /* Dit zorgt ervoor dat de inhoud boven de overlay staat */
+        z-index: 3; /* Inhoud heeft de hoogste z-index */
+        color: white; /* Witte tekstkleur */
+        padding: 20px; /* Ruimte rond de tekst */
+      }
+
+      .intro {
+        margin-top: 150px;
+      }
+
+      .socials {
+        margin-left: 100px;
+      }
+    </style>
+  </head>
+  <body class="bg-dark">
+    <div class="bg-image img-fluid">
+      <div class="overlay"></div>
+
+      <!-- Here start the main.container-->
+      <main class="container content">
+        <!-- NavBar -->
+        <nav
+          class="navbar navbar-expand-lg"
+          style="position: relative; z-index: 3"
+        >
+          <div class="container-fluid">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon bg-light"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto gap-4 lg">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active text-light fw-semibold fs-4"
+                    aria-current="page"
+                    href="index.html"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active text-light fw-semibold fs-3"
+                    aria-current="page"
+                    href="hobby.html"
+                    >Hobby</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active text-light fw-semibold fs-4"
+                    aria-current="page"
+                    href="interesses.html"
+                    >Interesses</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active text-danger border-bottom border-danger fw-semibold fs-4"
+                    aria-current="page"
+                    href="ervaringen.html"
+                    >Ervaringen</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active text-light fw-semibold fs-4"
+                    aria-current="page"
+                    href="projecten.html"
+                    >Projecten</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active text-light fw-semibold fs-4"
+                    aria-current="page"
+                    href="#"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Text / picture on this page -->
+
+        <div class="row">
+          <div class="col-lg-6">
+            <div id="CarouselVanMezelf" class="carousel slide">
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#CarouselVanMezelf"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#CarouselVanMezelf"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#CarouselVanMezelf"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active ratio ratio-1x1 img-fluid">
+                  <img
+                    src="img/Mezelf/Afbeelding kringwinkel.jpg"
+                    class=" d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item ratio ratio-1x1">
+                  <img
+                    src="img/Mezelf/afbeelding mezelf 2.jpg"
+                    class=" d-block w-100 "
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item ratio ratio-1x1 img-fluid">
+                  <img
+                    src="img/Mezelf/afbeelidng mezlef 3.jpg"
+                    class=" d-block w-100"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#CarouselVanMezelf"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#CarouselVanMezelf"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <div class="col"></div>
+        </div>
+      </main>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
