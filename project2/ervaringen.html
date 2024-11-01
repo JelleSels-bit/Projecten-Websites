@@ -17,7 +17,7 @@
     <style>
       /* Achtergrondafbeelding instellingen */
       .bg-image {
-        background-image: url("img/papers.co-mf29-cosmos-red-night-live-lake-space-starry-25-wallpaper.jpg"); /* Vervang dit met de juiste afbeelding */
+        background-image: url("img/papers.co-mf29-cosmos-red-night-live-lake-space-starry-25-wallpaper.jpg");
         background-size: cover; /* Zorgt ervoor dat de afbeelding de hele achtergrond bedekt */
         background-position: center; /* Positioneert de afbeelding in het midden */
         min-height: 100vh; /* Zorgt ervoor dat het gedeelte de volledige hoogte van het scherm heeft */
@@ -56,6 +56,24 @@
       .socials {
         margin-left: 100px;
       }
+
+      .accordion {
+        --bs-accordion-color: var(--bs-body-color);
+        --bs-accordion-bg: black;
+        --bs-accordion-transition: color 0.15s ease-in-out,
+          background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+          box-shadow 0.15s ease-in-out, border-radius 0.15s ease-in-out;
+
+        --bs-accordion-border-color: #dc3545;
+        --bs-accordion-border-width: var(--bs-border-width);
+        --bs-accordion-border-radius: var(--bs-border-radius);
+
+        --bs-accordion-inner-border-radius: calc(
+          var(--bs-border-radius) - (var(--bs-border-width) * 2)
+        );
+        --bs-accordion-btn-padding-x: 1.25rem;
+        --bs-accordion-btn-padding-y: 1rem;
+      }
     </style>
   </head>
   <body class="bg-dark">
@@ -93,7 +111,7 @@
                 </li>
                 <li class="nav-item">
                   <a
-                    class="nav-link active text-light fw-semibold fs-3"
+                    class="nav-link active text-light fw-semibold fs-4"
                     aria-current="page"
                     href="hobby.html"
                     >Hobby</a
@@ -109,7 +127,7 @@
                 </li>
                 <li class="nav-item">
                   <a
-                    class="nav-link active text-danger border-bottom border-danger fw-semibold fs-4"
+                    class="nav-link active text-danger border-bottom border-danger fw-semibold fs-3"
                     aria-current="page"
                     href="ervaringen.html"
                     >Ervaringen</a
@@ -138,81 +156,230 @@
 
         <!-- Text / picture on this page -->
 
-        <div class="row">
+        <div class="row intro">
           <div class="col-lg-6">
-            <div id="CarouselVanMezelf" class="carousel slide">
-              <div class="carousel-indicators">
-                <button
-                  type="button"
-                  data-bs-target="#CarouselVanMezelf"
-                  data-bs-slide-to="0"
-                  class="active"
-                  aria-current="true"
-                  aria-label="Slide 1"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#CarouselVanMezelf"
-                  data-bs-slide-to="1"
-                  aria-label="Slide 2"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#CarouselVanMezelf"
-                  data-bs-slide-to="2"
-                  aria-label="Slide 3"
-                ></button>
+            <img
+              class="mt-4 img-fluid rounded-circle"
+              src="img/Mezelf/afbeelding mezelf 2.jpg"
+              alt="This is an animated picture of myself. The style is based off anime / cartoon"
+            />
+          </div>
+          <div class="col">
+            <h2 class="text-danger">Profile:</h2>
+            <p>
+              Fresh off the press and 100% ready for the job market. After 16
+              years of schooling and various student jobs. I'm fully prepared to
+              put my knowledge to work in a professional role. I'm looking for a
+              dynamic work environment with room for initiative. Where
+              colleagues support each other to improve every day.
+            </p>
+
+            <h3 class="text-danger mt-4">Work Experiences:</h3>
+
+            <ul>
+              <li class="mb-2">
+                <strong class="text-light fs-5">Jobstudent:</strong> <br />
+                - Afwerking drukkerij bij Cartamundi (16/08/21 - 20/08/21)
+              </li>
+              <li class="mb-2">
+                <strong class="text-light fs-5">Vrijwilligerswerk:</strong>
+                <br />
+                - Horeca (toogbediening) bij Dansclub Beerse (Om de 2 weken)
+              </li>
+              <li class="mb-2">
+                <strong class="text-light fs-5">Jobstudent:</strong><br />
+                - Klinkers aanbrengen bij Klinkers Leyen (9/08/21 - 13/08/21)
+              </li>
+              <li class="mb-2">
+                <strong class="text-light fs-5">Jobstudent:</strong><br />
+                - Verzorging bejaarde bij Zorggroep Orion (17/08/20 - 21/08/20)
+              </li>
+              <li class="mb-2">
+                <strong class="text-light fs-5">Jobstudent:</strong> <br />
+                - Magazijn bij Signature Foods (4/08/22 - 26/08/22)
+              </li>
+              <li class="mb-2">
+                <strong class="text-light fs-5">Jobstudent:</strong> <br />
+                - Orderpicker bij IJsboereke (7/08/23 - 18/08/23 en 29/06/24 -
+                31/07/24)
+              </li>
+              <li class="mb-2">
+                <strong class="text-light fs-5">Stagiaire:</strong> <br />
+                - Dispatching wegvervoer bij Kringwinkel de cirkel (Brecht)
+                <br />
+                (08/02/24 - 24/05/24)
+              </li>
+
+              <li class="mb-2">
+                <strong class="text-light fs-5">Jobstudent:</strong><br />
+                - Orderpicker bij IJsboereke (7/08/23 - 18/08/23 en 29/06/24 -
+                31/07/24)
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-lg-6">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d79777.19857036322!2d4.780907216818419!3d51.328830904629974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6b1870f095deb%3A0x40099ab2f4d5dc0!2s2300%20Turnhout!5e0!3m2!1snl!2sbe!4v1730461901500!5m2!1snl!2sbe"
+              width="600"
+              height="450"
+              class=""
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+
+          <div class="col">
+            <h3 class="text-danger">Contact information:</h3>
+
+            <ul>
+              <li class="mb-2">Birth date: 26/02/2003</li>
+              <li class="mb-2">Home town: 2300 Turnhout</li>
+              <li class="mb-2">Phone number: 0483 45 76 50</li>
+              <li class="mb-2">E-mail: Jelle.Sels.03@gmail.com</li>
+            </ul>
+
+            <h3 class="text-danger">IT knowledge:</h3>
+            <ul>
+              <li class="mb-2">
+                <strong class="fw-semibold">Programming:</strong> <br />
+                C#: Beginner <br />
+                HTML: Beginner <br />
+                CSS: Beginner <br />
+                SQL: Beginner <br />
+              </li>
+              <li class="mb-2">
+                <strong class="fw-semibold">Microsoft Office:</strong>
+                Excel: advanced <br />
+                Word: intermediate <br />
+                Powerpoint: intermediate
+              </li>
+              <li class="mb-2">
+                <strong class="fw-semibold">Adobe:</strong> <br />
+                Indesign: advanced <br />
+                Illustrator: intermediate <br />
+                Photoshop: Basics
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Accordion + Langauge skills -->
+        <div class="row mt-3">
+          <div class="col-lg-6">
+            <h3 class="text-danger">Language knowledge:</h3>
+            <ul>
+              <li class="mb-2">
+                <strong class="fw-semibold">Dutch:</strong> Native language
+              </li>
+              <li class="mb-2">
+                <strong class="fw-semibold">English:</strong> B1
+              </li>
+              <li class="mb-2">
+                <strong class="fw-semibold">French:</strong> Limited
+              </li>
+            </ul>
+          </div>
+
+          <div class="col">
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    VTST Graphic Communication and PrintMedia
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body text-light">
+                    <strong>This is the first item's accordion body.</strong> It
+                    is shown by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These
+                    classes control the overall appearance, as well as the
+                    showing and hiding via CSS transitions. You can modify any
+                    of this with custom CSS or overriding our default variables.
+                    It's also worth noting that just about any HTML can go
+                    within the <code>.accordion-body</code>, though the
+                    transition does limit overflow.
+                  </div>
+                </div>
               </div>
-              <div class="carousel-inner">
-                <div class="carousel-item active ratio ratio-1x1 img-fluid">
-                  <img
-                    src="img/Mezelf/Afbeelding kringwinkel.jpg"
-                    class=" d-block w-100"
-                    alt="..."
-                  />
-                </div>
-                <div class="carousel-item ratio ratio-1x1">
-                  <img
-                    src="img/Mezelf/afbeelding mezelf 2.jpg"
-                    class=" d-block w-100 "
-                    alt="..."
-                  />
-                </div>
-                <div class="carousel-item ratio ratio-1x1 img-fluid">
-                  <img
-                    src="img/Mezelf/afbeelidng mezlef 3.jpg"
-                    class=" d-block w-100"
-                    alt="..."
-                  />
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                  Thomas More Transport & Logistics
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <strong>This is the second item's accordion body.</strong>
+                    It is hidden by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These
+                    classes control the overall appearance, as well as the
+                    showing and hiding via CSS transitions. You can modify any
+                    of this with custom CSS or overriding our default variables.
+                    It's also worth noting that just about any HTML can go
+                    within the <code>.accordion-body</code>, though the
+                    transition does limit overflow.
+                  </div>
                 </div>
               </div>
-              <button
-                class="carousel-control-prev"
-                type="button"
-                data-bs-target="#CarouselVanMezelf"
-                data-bs-slide="prev"
-              >
-                <span
-                  class="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button
-                class="carousel-control-next"
-                type="button"
-                data-bs-target="#CarouselVanMezelf"
-                data-bs-slide="next"
-              >
-                <span
-                  class="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Next</span>
-              </button>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    Accordion Item #3
+                  </button>
+                </h2>
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It
+                    is hidden by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These
+                    classes control the overall appearance, as well as the
+                    showing and hiding via CSS transitions. You can modify any
+                    of this with custom CSS or overriding our default variables.
+                    It's also worth noting that just about any HTML can go
+                    within the <code>.accordion-body</code>, though the
+                    transition does limit overflow.
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col"></div>
         </div>
       </main>
     </div>
