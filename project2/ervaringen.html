@@ -14,67 +14,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
-    <style>
-      /* Achtergrondafbeelding instellingen */
-      .bg-image {
-        background-image: url("img/papers.co-mf29-cosmos-red-night-live-lake-space-starry-25-wallpaper.jpg");
-        background-size: cover; /* Zorgt ervoor dat de afbeelding de hele achtergrond bedekt */
-        background-position: center; /* Positioneert de afbeelding in het midden */
-        min-height: 100vh; /* Zorgt ervoor dat het gedeelte de volledige hoogte van het scherm heeft */
-        position: relative; /* Zorg ervoor dat de z-index werkt */
-        z-index: 1; /* Zet de achtergrondafbeelding op een lagere laag */
-      }
-
-      /* Overlay voor betere leesbaarheid */
-      .overlay {
-        position: absolute; /* Absoluut positioneren ten opzichte van de bg-image */
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(
-          0,
-          0,
-          0,
-          0.5
-        ); /* Donkere overlay voor beter contrast */
-        z-index: 2; /* Overlay heeft een hogere z-index dan de achtergrond */
-      }
-
-      /* Inhoud boven de overlay */
-      .content {
-        position: relative; /* Dit zorgt ervoor dat de inhoud boven de overlay staat */
-        z-index: 3; /* Inhoud heeft de hoogste z-index */
-        color: white; /* Witte tekstkleur */
-        padding: 20px; /* Ruimte rond de tekst */
-      }
-
-      .intro {
-        margin-top: 150px;
-      }
-
-      .socials {
-        margin-left: 100px;
-      }
-
-      .accordion {
-        --bs-accordion-color: var(--bs-body-color);
-        --bs-accordion-bg: black;
-        --bs-accordion-transition: color 0.15s ease-in-out,
-          background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
-          box-shadow 0.15s ease-in-out, border-radius 0.15s ease-in-out;
-
-        --bs-accordion-border-color: #dc3545;
-        --bs-accordion-border-width: var(--bs-border-width);
-        --bs-accordion-border-radius: var(--bs-border-radius);
-
-        --bs-accordion-inner-border-radius: calc(
-          var(--bs-border-radius) - (var(--bs-border-width) * 2)
-        );
-        --bs-accordion-btn-padding-x: 1.25rem;
-        --bs-accordion-btn-padding-y: 1rem;
-      }
-    </style>
+    <link rel="stylesheet" href="css.css" />
   </head>
   <body class="bg-dark">
     <div class="bg-image img-fluid">
@@ -220,28 +160,21 @@
         </div>
 
         <div class="row mt-5">
-          <div class="col-lg-6">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d79777.19857036322!2d4.780907216818419!3d51.328830904629974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6b1870f095deb%3A0x40099ab2f4d5dc0!2s2300%20Turnhout!5e0!3m2!1snl!2sbe!4v1730461901500!5m2!1snl!2sbe"
-              width="600"
-              height="450"
-              class=""
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-
-          <div class="col">
-            <h3 class="text-danger">Contact information:</h3>
-
+          <div class="col-lg-4">
+            <h3 class="text-danger">Language knowledge:</h3>
             <ul>
-              <li class="mb-2">Birth date: 26/02/2003</li>
-              <li class="mb-2">Home town: 2300 Turnhout</li>
-              <li class="mb-2">Phone number: 0483 45 76 50</li>
-              <li class="mb-2">E-mail: Jelle.Sels.03@gmail.com</li>
+              <li class="mb-2">
+                <strong class="fw-semibold">Dutch:</strong> Native language
+              </li>
+              <li class="mb-2">
+                <strong class="fw-semibold">English:</strong> B1
+              </li>
+              <li class="mb-2">
+                <strong class="fw-semibold">French:</strong> Limited
+              </li>
             </ul>
-
+          </div>
+          <div class="col-lg-4">
             <h3 class="text-danger">IT knowledge:</h3>
             <ul>
               <li class="mb-2">
@@ -257,45 +190,23 @@
                 Word: intermediate <br />
                 Powerpoint: intermediate
               </li>
-              <li class="mb-2">
-                <strong class="fw-semibold">Adobe:</strong> <br />
-                Indesign: advanced <br />
-                Illustrator: intermediate <br />
-                Photoshop: Basics
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- Accordion + Langauge skills -->
-        <div class="row mt-3">
-          <div class="col-lg-6">
-            <h3 class="text-danger">Language knowledge:</h3>
-            <ul>
-              <li class="mb-2">
-                <strong class="fw-semibold">Dutch:</strong> Native language
-              </li>
-              <li class="mb-2">
-                <strong class="fw-semibold">English:</strong> B1
-              </li>
-              <li class="mb-2">
-                <strong class="fw-semibold">French:</strong> Limited
-              </li>
             </ul>
           </div>
 
           <div class="col">
+            <h3 class="mb-3 text-danger">Education:</h3>
             <div class="accordion" id="accordionExample">
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button
-                    class="accordion-button"
+                    class="accordion-button text-light bg-black"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapseOne"
                     aria-expanded="true"
                     aria-controls="collapseOne"
                   >
-                    VTST Graphic Communication and PrintMedia
+                    VTST Graphic Communication and PrintMedia (2015 - 2021)
                   </button>
                 </h2>
                 <div
@@ -319,14 +230,14 @@
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button
-                    class="accordion-button collapsed"
+                    class="accordion-button collapsed text-light bg-black"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapseTwo"
                     aria-expanded="false"
                     aria-controls="collapseTwo"
                   >
-                  Thomas More Transport & Logistics
+                    Thomas More Transport & Logistics (2021 - 2023)
                   </button>
                 </h2>
                 <div
@@ -334,7 +245,7 @@
                   class="accordion-collapse collapse"
                   data-bs-parent="#accordionExample"
                 >
-                  <div class="accordion-body">
+                  <div class="accordion-body text-light">
                     <strong>This is the second item's accordion body.</strong>
                     It is hidden by default, until the collapse plugin adds the
                     appropriate classes that we use to style each element. These
@@ -350,14 +261,14 @@
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button
-                    class="accordion-button collapsed"
+                    class="accordion-button collapsed text-light bg-black"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapseThree"
                     aria-expanded="false"
                     aria-controls="collapseThree"
                   >
-                    Accordion Item #3
+                    Thomas More Programming (2024 - xxxx)
                   </button>
                 </h2>
                 <div
@@ -365,7 +276,7 @@
                   class="accordion-collapse collapse"
                   data-bs-parent="#accordionExample"
                 >
-                  <div class="accordion-body">
+                  <div class="accordion-body text-light">
                     <strong>This is the third item's accordion body.</strong> It
                     is hidden by default, until the collapse plugin adds the
                     appropriate classes that we use to style each element. These
@@ -379,6 +290,30 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        <!-- Accordion + Language skills -->
+        <div class="row mt-3">
+          <div class="col-lg-6">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d79777.19857036322!2d4.780907216818419!3d51.328830904629974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6b1870f095deb%3A0x40099ab2f4d5dc0!2s2300%20Turnhout!5e0!3m2!1snl!2sbe!4v1730461901500!5m2!1snl!2sbe"
+              width="600"
+              height="450"
+              class="mt-3"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+
+          <div class="col">
+            <h3 class="mt-3 text-danger">Contact information:</h3>
+            <ul>
+              <li class="mb-2">Birth date: 26/02/2003</li>
+              <li class="mb-2">Home town: 2300 Turnhout</li>
+              <li class="mb-2">Phone number: 0483 45 76 50</li>
+              <li class="mb-2">E-mail: Jelle.Sels.03@gmail.com</li>
+            </ul>
           </div>
         </div>
       </main>

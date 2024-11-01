@@ -14,50 +14,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
-    <style>
-      /* Achtergrondafbeelding instellingen */
-      .bg-image {
-        background-image: url("img/papers.co-mf29-cosmos-red-night-live-lake-space-starry-25-wallpaper.jpg"); /* Vervang dit met de juiste afbeelding */
-        background-size: cover; /* Zorgt ervoor dat de afbeelding de hele achtergrond bedekt */
-        background-position: center; /* Positioneert de afbeelding in het midden */
-        min-height: 100vh; /* Zorgt ervoor dat het gedeelte de volledige hoogte van het scherm heeft */
-        position: relative; /* Zorg ervoor dat de z-index werkt */
-        z-index: 1; /* Zet de achtergrondafbeelding op een lagere laag */
-      }
-
-      /* Overlay voor betere leesbaarheid */
-      .overlay {
-        position: absolute; /* Absoluut positioneren ten opzichte van de bg-image */
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(
-          0,
-          0,
-          0,
-          0.5
-        ); /* Donkere overlay voor beter contrast */
-        z-index: 2; /* Overlay heeft een hogere z-index dan de achtergrond */
-      }
-
-      /* Inhoud boven de overlay */
-      .content {
-        position: relative; /* Dit zorgt ervoor dat de inhoud boven de overlay staat */
-        z-index: 3; /* Inhoud heeft de hoogste z-index */
-        color: white; /* Witte tekstkleur */
-        padding: 20px; /* Ruimte rond de tekst */
-      }
-
-      .intro {
-        margin-top: 150px;
-      }
-
-      .socials {
-        margin-left: 100px;
-      }
-    </style>
-  </head>
+    <link rel="stylesheet" href="css.css" />
+    </head>
   <body class="bg-dark">
     <div class="bg-image img-fluid">
       <div class="overlay"></div>
